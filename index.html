@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumePro Elite | The Ultimate ATS Resume Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide-static@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700&family=Roboto+Mono&family=Montserrat:wght@700;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <!-- html2pdf.js bundle includes all dependencies like jspdf and html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+      body { 
+        font-family: 'Inter', sans-serif; 
+        scroll-behavior: smooth;
+      }
+      .resume-preview {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        width: 210mm;
+        min-height: 297mm;
+        background: white;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
+      }
+      .preview-container {
+        padding: 40px;
+        background: #f1f5f9;
+      }
+      @media print {
+        body, html {
+          height: auto !important;
+          overflow: visible !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .no-print, header, aside, .zoom-controls, .absolute, .fixed, [role="dialog"] {
+          display: none !important;
+        }
+        #root, #root > div {
+          height: auto !important;
+          overflow: visible !important;
+          display: block !important;
+        }
+        main {
+          position: static !important;
+          display: block !important;
+          width: 100% !important;
+          height: auto !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          overflow: visible !important;
+          background: white !important;
+        }
+        .resume-preview { 
+          box-shadow: none !important; 
+          margin: 0 !important; 
+          width: 210mm !important;
+          height: auto !important;
+          transform: none !important;
+          border: none !important;
+        }
+      }
+      .list-dash { list-style-type: '- '; }
+      .list-square { list-style-type: square; }
+      .break-inside-avoid { break-inside: avoid; }
+      ::-webkit-scrollbar { width: 8px; height: 8px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "zustand": "https://esm.sh/zustand@^5.0.10",
+    "zustand/": "https://esm.sh/zustand@^5.0.10/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "docx": "https://esm.sh/docx@9.1.0",
+    "file-saver": "https://esm.sh/file-saver@2.0.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
